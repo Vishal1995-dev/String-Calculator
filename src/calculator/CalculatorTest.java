@@ -21,5 +21,13 @@ public class CalculatorTest {
 	{
 		assertEquals(2,Calculator.Add("1,1"));
 	}
+	
+	@Test
+	public void unknoumIntegerString()
+	{
+		assertEquals(4,Calculator.Add("1,1,1,1"));
+	}
+	
+	
 }
 
