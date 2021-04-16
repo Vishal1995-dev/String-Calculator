@@ -28,6 +28,10 @@ public class CalculatorTest {
 		assertEquals(4,Calculator.Add("1,1,1,1"));
 	}
 	
-	
+	@Test
+	public void newlineDelimiterString()
+	{
+		assertEquals(6,Calculator.Add("1,2\n3"));
+	}
 }
 

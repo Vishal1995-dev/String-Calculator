@@ -6,19 +6,15 @@ public class Calculator {
 		if(str.isEmpty()) {
 			return 0;
 		}
-		else if(str.contains(","))
+		else
 		{
-			String[] data=str.split(",");
+			String[] data=str.split(",|\n");
 			int ret=0;
 			for(String i:data)
 			{
 				ret+=Integer.parseInt(i);
 			}
 			return ret;
-		}
-		else
-		{
-			return Integer.parseInt(str);
 		}	
 	}
 }
