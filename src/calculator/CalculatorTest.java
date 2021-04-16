@@ -39,5 +39,19 @@ public class CalculatorTest {
 	{
 		assertEquals(3,Calculator.Add("//;\n1;2"));
 	}
+	
+	@Test
+	public void negativeNumberString()
+	{
+		try
+		{
+			Calculator.Add("-1,-2,3");
+			fail("Exception expected.");
+		}
+		catch(RuntimeException ex)
+		{
+			assertEquals("negatives not allowed: -1,-2",ex.getMessage());
+		}
+	}
 }
 
