@@ -37,7 +37,7 @@ public class CalculatorTest {
 	@Test
 	public void customDelimiterString()
 	{
-		assertEquals(3,Calculator.Add("//;\n1;2"));
+		assertEquals(3,Calculator.Add("//*\n1*2"));
 	}
 	
 	@Test
@@ -58,6 +58,12 @@ public class CalculatorTest {
 	public void valueIgnoreString()
 	{
 		assertEquals(2,Calculator.Add("1002,2"));
+	}
+	
+	@Test
+	public void anyLengthDelimiterString()
+	{
+		assertEquals(6,Calculator.Add("//[***]\n1***2***3"));
 	}
 }
 

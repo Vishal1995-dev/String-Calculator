@@ -13,13 +13,21 @@ public class Calculator {
 		}
 		else
 		{
-			if(str.startsWith("//"))
+			if(str.startsWith("//["))
+			{
+				String[] d=str.split("\n");
+				String q=d[0].substring(3,d[0].length()-1);
+				String[] data=d[1].split(Pattern.quote(q));
+				int ret=getSum(data);
+				return ret;
+			}
+			else if(str.startsWith("//"))
 			{
 				Matcher m = Pattern.compile("//(.)\n(.*)").matcher(str);
 				m.matches();
 				String delimiter = m.group(1);
 				String numbers = m.group(2);
-				String[] data=numbers.split(delimiter);
+				String[] data=numbers.split(Pattern.quote(delimiter));
 				int ret=getSum(data);
 				return ret;
 				
