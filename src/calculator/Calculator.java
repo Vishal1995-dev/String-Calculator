@@ -43,7 +43,8 @@ public class Calculator {
 			{
 				l.add(i);
 			}
-			ret+=int_i;
+			if(int_i<=1000)
+				ret+=int_i;
 		}
 		if(l.size()>0)
 		{

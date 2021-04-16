@@ -53,5 +53,11 @@ public class CalculatorTest {
 			assertEquals("negatives not allowed: -1,-2",ex.getMessage());
 		}
 	}
+	
+	@Test
+	public void valueIgnoreString()
+	{
+		assertEquals(2,Calculator.Add("1002,2"));
+	}
 }
 
